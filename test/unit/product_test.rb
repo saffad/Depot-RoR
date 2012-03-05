@@ -50,7 +50,7 @@ class ProductTest < ActiveSupport::TestCase
      end
    end
    
-   test "product is not valid without a unique title" do
+   test "product is not valid because title is not unique" do
      product = Product.new(title:       products(:softw).title,
                            description: "yyy", 
                            price:       1, 
