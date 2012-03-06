@@ -6,6 +6,7 @@ class ProductTest < ActiveSupport::TestCase
      product = Product.new
      assert product.invalid?
      assert product.errors[:title].any?
+     assert product.errors[:author].any?
      assert product.errors[:description].any?
      assert product.errors[:price].any?
      assert product.errors[:image_url].any?
@@ -13,6 +14,7 @@ class ProductTest < ActiveSupport::TestCase
    
    test "product price must be positive" do
      product = Product.new(title:       "My Book",
+                           author: "zz",
                            description: "xyz",
                            image_url:   "zzz.jpg")
      product.price = -1
@@ -31,6 +33,7 @@ class ProductTest < ActiveSupport::TestCase
    
    def new_product(image_url)
      Product.new(title:       "My Book ",
+                 author: "Author",
                  description: "xyz",
                  price:       1,
                  image_url:   image_url)
@@ -52,6 +55,7 @@ class ProductTest < ActiveSupport::TestCase
    
    test "product is not valid because title is not unique" do
      product = Product.new(title:       products(:softw).title,
+                           author: "xyz", 
                            description: "yyy", 
                            price:       1, 
                            image_url:   "fred.gif")
@@ -62,6 +66,7 @@ class ProductTest < ActiveSupport::TestCase
 
    test "product is not valid without a unique title - i18n" do
      product = Product.new(title:       products(:softw).title,
+                           author: "xyz",
                            description: "yyy", 
                            price:       1, 
                            image_url:   "fred.gif")

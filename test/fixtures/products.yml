@@ -3,12 +3,14 @@
 
 one:
   title: MyString
+  author: MyString
   description: MyText
   image_url: MyString
   price: 9.99
 
 two:
   title: MyString
+  author: MyString
   description: MyText
   image_url: MyString
   price: 9.99
@@ -16,6 +18,7 @@ two:
 
 softw: 
   title: Software Engineering
+  Author: Ian Sommerville
   description: 
     Ruby is the fastest growing and most exciting dynamic
     language out there.  If you need to get working programs
