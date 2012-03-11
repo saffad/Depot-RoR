@@ -35,20 +35,29 @@
 
 }
 
+@-webkit-keyframes notice {
+	0%   { opacity: 0; }
+	100% { opacity: 1; }
+}
+
 #notice {
   color: #000 !important;
-  border: 2px solid red;
+//  border: 2px solid red;
   padding: 1em;
   margin-bottom: 2em;
-  background-color: #f0f0f0;
-  font: bold smaller sans-serif;
+  background-color: #FFF1C9;
+  font: bold small sans-serif;
+	text-shadow:-1px -1px 1px white;
+	border-radius:10px;
+	box-shadow: inset 1px 1px 4px #CCC;
+	-webkit-animation: notice 3s ;
 }
 
 #columns {
   background: #EAE9E7;
 
   #main {
-    margin-left: 12em;
+    margin-left: 16em;
     padding: 1em;
     background: white;
   }
@@ -56,8 +65,70 @@
   #side {
     float: left;
     padding: 1em 2em;
-    width: 8em;
+    width: 12em;
     background: #EAE9E7;
+
+	form, div {
+		display: inline;
+	}
+	
+	input {
+		background: #377ad0;
+		  background: -moz-linear-gradient(top, #52a8e8 0%, #377ad0 100%);
+		  background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#52a8e8), to(#377ad0));
+		  border-top: 1px solid #4081af;
+		  border-right: 1px solid #2e69a3;
+		  border-bottom: 1px solid #20559a;
+		  border-left: 1px solid #2e69a3;
+		  -moz-border-radius: 16px;
+		  -webkit-border-radius: 16px;
+		  border-radius: 16px;
+		  -moz-box-shadow: inset 0 1px 0 0 #72b9eb, 0 1px 2px 0 #b3b3b3;
+		  -webkit-box-shadow: inset 0 1px 0 0 #72b9eb, 0 1px 2px 0 #b3b3b3;
+		  color: #fff;
+		  font-family: "lucida grande", sans-serif;
+		  font-size: 11px;
+		  font-weight: normal;
+		  line-height: 1;
+		  padding: 3px 0 5px 0;
+		  text-align: center;
+		  text-shadow: 0 -1px 1px #3275bc;
+		  width: 112px;
+		  -webkit-background-clip: padding-box;
+	}
+	
+	input:hover {
+		background: #206bcb;
+		  background: -moz-linear-gradient(top, #3e9ee5 0%, #206bcb 100%);
+		  background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#3e9ee5), to(#206bcb));
+		  border-top: 1px solid #2a73a6;
+		  border-right: 1px solid #165899;
+		  border-bottom: 1px solid #07428f;
+		  border-left: 1px solid #165899;
+		  -moz-box-shadow: inset 0 1px 0 0 #62b1e9;
+		  -webkit-box-shadow: inset 0 1px 0 0 #62b1e9;
+		  cursor: pointer;
+		  text-shadow: 0 -1px 1px #1d62ab;
+		  -webkit-background-clip: padding-box;
+	}
+	input:active {
+		  background: #3282d3;
+		  border: 1px solid #154c8c;
+		  border-bottom: 1px solid #0e408e;
+		  -moz-box-shadow: inset 0 0 6px 3px #1657b5, 0 1px 0 0 #fff;
+		  -webkit-box-shadow: inset 0 0 6px 3px #1657b5, 0 1px 0 0 #fff;
+		  text-shadow: 0 -1px 1px #2361a4;
+		  -webkit-background-clip: padding-box;
+	}
+	#cart {
+		font-size: smaller;
+		
+		table {
+			border-top:1px dotted #333;
+			border-bottom:1px dotted #333;
+			margin-bottom:10px;
+		}
+	}
 
     ul {
       padding: 0;

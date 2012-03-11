@@ -1,0 +1,9 @@
+if ($('#cart tr').length == 1) {$ ('#cart').fadeIn(2000);}
+
+
+$('#cart').html("<%=j render @cart %>");
+
+$('#current_item').css({'background-color':'#fff', 'opacity':'0'}).
+	animate({'background-color':'#EAE9E7', 'opacity':'1'}, 2000);
+
+// css({'background-color':'#fff;'}).animate({'background-color':'#EAE9E7'}, 3000);
