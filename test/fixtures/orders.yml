@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  name: Dave Thomas
+  address: MyText
+  email: dave@city.ac.uk
+  pay_type: Debit Card
+
+two:
+  name: MyString
+  address: MyText
+  email: bla@city.ac.uk
+  pay_type: MyString

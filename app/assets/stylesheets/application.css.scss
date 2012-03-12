@@ -150,3 +150,48 @@
     }
   }
 }
+
+.depot_form {
+	
+	fieldset {
+		background: #F0F0F0;
+		box-shadow: 0px 0px 10px #CCC;
+		border: none;
+		border-radius: 5px;
+	
+		legend {
+			color: black;
+			background: -webkit-gradient(linear, 0% 0%, 0% 59%, from(#CCC), to(#F0F0F0));
+			border-radius: 5px 5px 0px 0px;
+			height: 27px;
+			padding-left: 20px;
+			padding-right: 20px;
+			padding-top: 5px;
+			font-weight: bold;
+			padding-bottom: 0px;
+		}
+	}
+	
+	form {
+		label {
+			width:5em;
+			float:left;
+			text-align:right;
+			padding-top:0.2em;
+			margin-right:0.1em;
+			display:block;
+		}
+		select, textarea, input {
+			margin-left:0.5em;
+		}
+		
+		.submit {
+			margin-left: 4em;
+			
+		}
+		
+		br {
+			display:none;
+		}
+	}
+}
