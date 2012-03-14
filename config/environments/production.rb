@@ -65,5 +65,19 @@ Depot::Application.configure do
   # with SQLite, MySQL, and PostgreSQL)
   # config.active_record.auto_explain_threshold_in_seconds = 0.5
   
-  config.action_mailer.delivery_method = :smtp | :sendmail | :test
+
+     config.action_mailer.delivery_method = :smtp
+     
+     config.action_mailer.smtp_settings = {
+       address:        "smtp.gmail.com",
+       port:           587, 
+       domain:         "gmail.com",
+       authentication: "plain",
+       user_name:      "saffad@gmail.com",
+       password:       "G06facupwin=lfc",
+       enable_starttls_auto: true
+     }
+   end
+
+
 end
