@@ -77,7 +77,5 @@ Depot::Application.configure do
        password:       "G06facupwin=lfc",
        enable_starttls_auto: true
      }
-   end
-
 
 end
