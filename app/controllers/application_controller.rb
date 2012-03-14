@@ -1,4 +1,5 @@
 class ApplicationController < ActionController::Base
+  before_filter :authorize #evokes the authorize method after every action
   protect_from_forgery
   
   private
@@ -10,4 +11,13 @@ class ApplicationController < ActionController::Base
       session[:cart_id] = cart.id
       cart
     end
+    
+    protected 
+    
+    def authorize #find user id, if not then redirect.
+      unless User.find_by_id(session[:user_id])
+        redirect_to login_url, notice: "Please Log in"
+      end
+    end
+    
 end

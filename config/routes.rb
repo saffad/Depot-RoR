@@ -1,4 +1,16 @@
 Depot::Application.routes.draw do
+  get 'admin' => 'admin#index'
+  #changes the admin/index to just admin
+  
+  controller :sessions  do
+    get 'login' => :new #session new replace with login HTTP GET
+    post 'login' => :create #session create replace with login HTTP POST
+    delete 'logout' => :destroy #session destroy replace with logout
+    
+  end
+
+  resources :users
+
   resources :orders
 
   resources :line_items

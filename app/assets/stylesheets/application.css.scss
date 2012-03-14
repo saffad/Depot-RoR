@@ -23,15 +23,18 @@
 	padding-left:20px;
 	padding-top:5px;
   }
-  span {
+  span.title {
 	float: right;
 	position: relative;
-	top:42px;
+	top: 42px;
 	font-family: Georgia;
-	right: 13px;
 	font-size: 31px;
 	color: #333;
 	}
+	
+
+	
+	
 
 }
 
@@ -54,7 +57,7 @@
 }
 
 #columns {
-  background: #EAE9E7;
+  background: white;
 
   #main {
     margin-left: 16em;
@@ -67,6 +70,9 @@
     padding: 1em 2em;
     width: 12em;
     background: #EAE9E7;
+	border-bottom-right-radius: 10px;
+	box-shadow: -1px 0px 9px #ccc;
+	border: 1px solid #DDD;
 
 	form, div {
 		display: inline;
@@ -141,6 +147,7 @@
           font-size: small;
 		 text-decoration:none;
 		 font-weight:bold;
+		
         }
 		a:hover {
 			color:red;
