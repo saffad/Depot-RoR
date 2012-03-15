@@ -1,5 +1,6 @@
+<% if notice %>
 <p id="notice"><%= notice %></p>
-
+<% end %>
 <p>
   <b>Name:</b>
   <%= @order.name %>
@@ -20,6 +21,17 @@
   <%= @order.pay_type %>
 </p>
 
+  <table>
+    <thead>
+      <tr>
+        <th>Quantity</th>
+        <th>Item</th>
+		<th>Price</th>
+      </tr>
+    </thead>
+    <tbody>
+      <%= render partial: 'line_items/line_item', collection: @order.line_items %>
+  </table>
 
 <%= link_to 'Edit', edit_order_path(@order) %> |
 <%= link_to 'Back', orders_path %>

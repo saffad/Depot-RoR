@@ -34,6 +34,7 @@
 			
 			<br/>
 			<% if session[:user_id] %>
+			Welcome, <%= User.find(session[:user_id]).name %>
 				<ul>
 					<li><%= link_to 'Orders', orders_path %></li>
 					<li><%= link_to 'Products', products_path %></li>
