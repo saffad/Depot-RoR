@@ -10,6 +10,11 @@ class Product < ActiveRecord::Base
   validates_attachment_content_type :picture, :content_type => 'image/jpeg'
   validates_attachment_presence :picture
 
+  attr_accessor :photo_file_name
+  attr_accessor :photo_content_type
+  attr_accessor :photo_file_size
+  attr_accessor :photo_updated_at
+
   # validates :image_url, allow_blank: true, format: {
   #   with: %r{\.(gif|png|jpg)$}i,
   #   message: 'must be GIF, PNG or JPG image'
