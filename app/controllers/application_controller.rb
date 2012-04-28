@@ -4,7 +4,8 @@ class ApplicationController < ActionController::Base
   
   private
   
-    def current_cart
+    def current_cart 
+      # store the cart id session
       Cart.find(session[:cart_id])
     rescue ActiveRecord::RecordNotFound
       cart = Cart.create
@@ -14,7 +15,7 @@ class ApplicationController < ActionController::Base
     
     protected 
     
-    def authorize #find user id, if not then redirect.
+    def authorize #find user id in session, if not then redirect.
       unless User.find_by_id(session[:user_id])
         redirect_to login_url, notice: "Please Log in"
       end

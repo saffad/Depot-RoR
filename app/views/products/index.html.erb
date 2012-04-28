@@ -3,6 +3,7 @@
 <table>
 <% @products.each do |product| %>
   <tr class="<%= cycle('list_line_odd', 'list_line_even') %>">
+    <!-- rails helper cycle function -->
 
     <td>
       <%= image_tag(product.picture, class: 'list_image') %>
